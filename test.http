@@ -1,0 +1,47 @@
+GET http://localhost:3000/products
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "description": "Description 1",
+    "image_url": "https://www.google.com",
+    "price": 100
+}
+
+###
+
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "john",
+    "password": "john123"
+}
+
+###
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoiam9obiIsImlhdCI6MTcwNjY4NTYxMSwiZXhwIjoxNzA2Njg1NjcxfQ.Xuqq4qKky6fv303dqbNxgGYgKqRtZjXKVPp41N1_OSI
+
+{
+    "items": [
+        {
+            "product_id": "0f4312f-f23fdaf-f12fdf-f322fdasd",
+            "quantity": 3
+        },
+        {
+            "product_id": "2f44232f-f265af-f76f-f322fdasd",
+            "quantity": 6
+        },
+        {
+            "product_id": "1f4312f-f2453af-f908f-f322fdasd",
+            "quantity": 1
+        }
+    ],
+    "card_hash": "4242424242424242"
+}
